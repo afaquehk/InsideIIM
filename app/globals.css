@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --page-bg: #f6f6f8;
+  --page-fg: #0f1724;
+  --accent: #0071e3;
+  --muted: #6b7280;
+}
+
+html,body,#root{height:100%;}
+
+body{
+  background:var(--page-bg);
+  color:var(--page-fg);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container {max-width:1200px; margin-left:auto; margin-right:auto; padding-left:24px; padding-right:24px}
+
+.hero {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:80px 0;
+}
+
+.hero-left {flex:1}
+.hero-title{font-size:56px; line-height:1.02; font-weight:700; margin:0 0 16px}
+.hero-sub{font-size:18px; color:var(--muted); max-width:640px}
+.hero-cta{margin-top:28px}
+
+.hero-visual{flex:1; display:flex; align-items:center; justify-content:center}
+.device-mock{width:520px; height:360px; border-radius:28px; background:linear-gradient(180deg,#0b1220,#0e1b2a); box-shadow:0 20px 60px rgba(15,23,42,0.35); display:flex; align-items:center; justify-content:center; color:white}
+
+@media(max-width:1024px){
+  .hero{flex-direction:column;padding:56px 0}
+  .device-mock{width:90%;height:280px}
+  .hero-title{font-size:40px}
+}
+
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:60px 0}
+@media(max-width:900px){.feature-grid{grid-template-columns:1fr}}
+
+.feature-card{background:white;border-radius:16px;padding:28px;box-shadow:0 6px 24px rgba(12,18,30,0.06)}
+
+.search-hero-input{display:flex; gap:12px; align-items:center}
+.search-input{flex:1;padding:14px 18px;border-radius:12px;border:1px solid #e6e6e9}
+.search-btn{background:var(--accent); color:white;padding:12px 18px;border-radius:12px}
+
+.brand-small{font-weight:600; letter-spacing:0.2em; font-size:12px; color:var(--muted)}
+
+.spy-html-output {white-space:pre-wrap; background:#fff1f2; color:#7f1d1d; padding:12px; border-radius:8px; overflow:auto}
+
